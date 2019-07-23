@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Insatgram Blogs</h1>
+
+
+  
+    <% @blogs.each do |blog| %>
+        
+        <%= blog.content %>
+       <p> <%= link_to 'Show', blog, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_blog_path(blog),class: 'btn btn-info' %>
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger' %></p>
+    <% end %>
+  <hr>
+
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
